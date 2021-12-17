@@ -23,9 +23,9 @@ jobs:
 
       - name: Perform Tests
         run: |
-          npm run test
+          npm run test >> output.txt
           npm run build
-          jest --ci --coverage && codecov > output.txt
+          jest --ci --coverage >> output.txt
 
       - name: Transform output
         id: results
